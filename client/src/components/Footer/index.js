@@ -1,9 +1,9 @@
 import React from 'react';
 import './footer.css';
-//import fb from '../assets/fbimg.png';
-//import twitter from '../assets/twitterimg.png';
-//import linkedin from '../assets/linkedinimg.png';
-//import insta from '../assets/instaimg.png';
+import fb from '../Footer/images/fbimg.png';
+import twitter from '../Footer/images/twitterimg.png';
+import linkedin from '../Footer/images/linkedinimg.png';
+import github from '../Footer/images/githubimg.png';
 
 
 const Footer=()=>{
@@ -58,6 +58,12 @@ const Footer=()=>{
                     </div>
                     <div className="sb__footer-links_div">
                         <h4>Coming soon on</h4>
+                        <div className="socialmedia">
+                            <p><img src={fb} alt=""/></p>
+                            <p><img src={twitter} alt=""/></p>
+                            <p><img src={linkedin} alt=""/></p>
+                            <p><img src={github} alt=""/></p>
+                        </div>
                     </div>
                 </div>
 
