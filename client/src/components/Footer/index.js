@@ -16,24 +16,15 @@ const Footer=()=>{
                         <a href="/employer">
                             <p>Employer</p>
                         </a>
-                        <a href="/healthplan">
-                            <p>Health Plan</p>
-                        </a>
                     </div>
                     <div className="sb__footer-links_div">
                         <h4>Resources</h4>
                         <a href="/resource">
                             <p>Resource Center</p>
                         </a>
-                        <a href="/resource">
-                            <p>Testimonials</p>
-                        </a>
                     </div>
                     <div className="sb__footer-links_div">
                         <h4>Company</h4>
-                        <a href="/about">
-                            <p>About</p>
-                        </a>
                         <a href="/contact">
                         <p>Contact</p>
                         </a>                                      
@@ -41,10 +32,10 @@ const Footer=()=>{
                     <div className="sb__footer-links_div">
                         <h4>Coming soon on</h4>
                         <div className="socialmedia">
-                            <p><img src={fb} alt=""/></p>
-                            <p><img src={twitter} alt=""/></p>
-                            <p><img src={linkedin} alt=""/></p>
-                            <p><img src={github} alt=""/></p>
+                            <p><img src={fb} alt="facebook"/></p>
+                            <p><img src={twitter} alt="twitter"/></p>
+                            <p><img src={linkedin} alt="linkedin"/></p>
+                            <p><img src={github} alt="github"/></p>
                         </div>
                     </div>
                 </div>
@@ -55,7 +46,7 @@ const Footer=()=>{
             <div className="sb__footer-below">
                 <div className="sb__footer-copyright">
                     <p>
-                        @{new Date().getFullYear()}OneStopCodingJobBoard. All rights reserved
+                        @{new Date().getFullYear()} One Stop Coding JobBoard. All rights reserved
                     </p>
                 </div>
                 <div className="sb__footer-below-links">
