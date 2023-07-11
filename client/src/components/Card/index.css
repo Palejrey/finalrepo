@@ -23,17 +23,13 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  
+  padding: 2;
 }
 
 body {
   font-family: Oxygen, sans-serif;
-  margin: 2rem;
-  margin-right: 200px;
-  margin-left: 200px;
-  
+  margin: 4rem;
 }
 
 .wrapper {
@@ -57,8 +53,9 @@ body {
 
 .card__image {
   height: 12rem;
-  width: 100%;
+  width: 90%;
   object-fit: cover;
+  padding-top: 20px;
 }
 
 .card__title {
@@ -77,6 +74,8 @@ body {
   margin: 1rem;
   border: 2px solid var(--clr-primary);
   background: transparent;
+  width: 30%;
+  align-self: center;
   color: var(--clr-primary);
   border-radius: var(--radius);
   transition: background 200ms ease-in, color 200ms ease-in;

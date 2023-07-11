@@ -12,7 +12,7 @@ class Navbar extends Component {
     return (
       <nav className="NavbarItems">
         <h1 className="logo">
-          One Stop Coding Job Board <i className="fab fa-react"></i>
+          One Stop Coding Job Board <i className="fab fa-reac"></i>
         </h1>
         <div className="menu-icons"
         onClick={this.handleClick}>

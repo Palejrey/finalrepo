@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import "./Signup.css";
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutation';
 
@@ -43,7 +43,7 @@ const Signup = () => {
       <main className="flex-row justify-center mb-4">
         <div className="col-12 col-lg-10">
           <div className="card">
-            <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
+            <h3 className="card-header bg-dark text-light p-2">Sign Up</h3>
             <div className="card-body">
               {data ? (
                 <p>
@@ -53,7 +53,7 @@ const Signup = () => {
               ) : (
                 <form onSubmit={handleFormSubmit}>
                   <input
-                    className="form-input"
+                    className="signup-input"
                     placeholder="Your username"
                     name="name"
                     type="text"
@@ -61,7 +61,7 @@ const Signup = () => {
                     onChange={handleChange}
                   />
                   <input
-                    className="form-input"
+                    className="signup-input"
                     placeholder="Your email"
                     name="email"
                     type="email"
@@ -69,7 +69,7 @@ const Signup = () => {
                     onChange={handleChange}
                   />
                   <input
-                    className="form-input"
+                    className="signup-input"
                     placeholder="******"
                     name="password"
                     type="password"
