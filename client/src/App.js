@@ -12,8 +12,10 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import JobPosting from './pages/JobPosting';
 
 import './App.css';
+
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -41,7 +43,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
       <div className="App">
-        <Header />
+        
         <div>
         <Routes>
           <Route 
@@ -55,6 +57,10 @@ function App() {
           <Route 
             path="/login"
             element={<Login />}           
+          />
+            <Route 
+            path="/job/:_id"
+            element={<JobPosting />}           
           />
         </Routes>
         </div>

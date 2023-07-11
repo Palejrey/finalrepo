@@ -8,54 +8,25 @@ import { QUERY_JOB } from '../utils/queries';
 
 
 const JobPosting = () => {
-  const { profileId } = useParams();
+  const { _id } = useParams();
 
-  // If there is no `profileId` in the URL as a parameter, execute the `QUERY_ME` query instead for the logged in user's information
-  const { loading, data } = useQuery(
-    profileId ? QUERY_SINGLE_PROFILE : QUERY_ME,
+  const { loading, data } = useQuery(QUERY_JOB,
     {
-      variables: { profileId: profileId },
+      variables: { _id: _id },
     }
   );
 
-  // Check if data is returning from the `QUERY_ME` query, then the `QUERY_SINGLE_PROFILE` query
-  const profile = data?.me || data?.profile || {};
-
-  // Use React Router's `<Navigate />` component to redirect to personal profile page if username is yours
-  if (Auth.loggedIn() && Auth.getProfile().data._id === profileId) {
-    return <Navigate to="/me" />;
-  }
-
+  const job =  data?.profile || {};
+  console.log(job);
   if (loading) {
     return <div>Loading...</div>;
   }
 
-  if (!profile?.name) {
-    return (
-      <h4>
-        You need to be logged in to see your profile page. Use the navigation
-        links above to sign up or log in!
-      </h4>
-    );
-  }
-
   return (
     <div>
-      <h2 className="card-header">
-        {profileId ? `${profile.name}'s` : 'Your'} friends have endorsed these
-        skills...
-      </h2>
-
-      {profile.skills?.length > 0 && (
-        <SkillsList
-          skills={profile.skills}
-          isLoggedInUser={!profileId && true}
-        />
-      )}
-
-      <div className="my-4 p-4" style={{ border: '1px dotted #1a1a1a' }}>
-        <SkillForm profileId={profile._id} />
-      </div>
+        <h1>{job._id}</h1>
+        <h1>{job.description}</h1>
+        <h1>{job.title}</h1>
     </div>
   );
 };
