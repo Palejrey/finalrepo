@@ -16,24 +16,15 @@ const Footer=()=>{
                         <a href="/employer">
                             <p>Employer</p>
                         </a>
-                        <a href="/healthplan">
-                            <p>Health Plan</p>
-                        </a>
                     </div>
                     <div className="sb__footer-links_div">
                         <h4>Resources</h4>
                         <a href="/resource">
                             <p>Resource Center</p>
                         </a>
-                        <a href="/resource">
-                            <p>Testimonials</p>
-                        </a>
                     </div>
                     <div className="sb__footer-links_div">
                         <h4>Company</h4>
-                        <a href="/about">
-                            <p>About</p>
-                        </a>
                         <a href="/contact">
                         <p>Contact</p>
                         </a>                                      
